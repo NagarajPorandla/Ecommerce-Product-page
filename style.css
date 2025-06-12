@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+body{
+  height: 100vh;
+}
+.nav-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 100px;
+}
+.left-nav{
+  display: flex;
+  align-items: center;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: 40px;
+}
+nav ul li{
+  list-style: none;
+  color: #908e8e;
+}
+.right-nav{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.avatar {
+  width: 35px;
+}
+hr{
+  width: 86%;
+  margin: 0 100px;
+  border: 1px solid #f4efef;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:40px 150px;
+}
+.main-image{
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.all-images{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+.all-images img{
+  width: 100px;
+  border-radius: 10px;
+}
+/* .all-images img:active{
+  border: 2px solid orangered;
+} */
+.content{
+  width: 100%;
+  margin: 20px;
+  padding-left:  100px ;
+
+}
+.content h1{
+  font-size: 55px;
+  padding: 20px 0 50px 0px;
+  line-height: 60px;
+}
+.content p{
+  padding-right: 30px ;
+  line-height: 25px;
+  margin-bottom: 20px;
+  color: hsl(220, 14%, 75%);
+}
+.name{
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: hsl(220, 13%, 13%);
+}
+.price{
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+.price h3{
+  font-size: 25px;
+  padding: 10px 0;
+}
+.discount{
+  background: hsl(0, 0%, 0%);
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.original-price{
+  font-weight: 700;
+  color: hsl(219, 9%, 45%);
+  text-decoration: line-through;
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.buttons > div{
+  display: flex;
+  align-items: center;
+  background: hsl(25, 100%, 94%);
+  gap: 30px;
+  padding: 15px 35px;
+  border-radius: 10px;
+}
+.add-to-cart{
+  display: flex;
+  align-items: center;
+  padding: 15px 50px;
+  gap: 10px;
+  background: hsl(26, 100%, 55%);
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+/*Pop up modal*/
+.modal{
+  position: fixed;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999; 
+  display: none;
+ 
+}
+.modal-content{
+  position: absolute;
+  padding: 20px;
+  text-align: center;
+}
+.modal-content img{
+  border-radius: 15px;
+  width: 500px;
+  height: auto;
+  max-height: 80vh;
+}
+.modal-images img{
+  border-radius: 8px;
+  width: 80px;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.modal-images img:active{
+  border: 2px solid orangered;
+}
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+#prevBtn {
+  left: 0px;
+}
+
+#nextBtn {
+  right: 0px;
+}
+
+#closeBtn{
+  position: absolute;
+  top: 0;
+  right: -20px;
+  height: 25px;
+  width: 25px;
+}
+/*Cart*/
+
+.cart-container{
+  position: fixed;
+  right: 0; left: 0; top: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.68);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.cart{
+  position: absolute;
+  top: 60px;
+  right: 180px;
+  width: 500px;
+  height: 90vh;
+  background: rgba(226, 157, 28, 0.628);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(226, 157, 28, 0.07);
+}
+#cartCloseBtn{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  height: 25px;
+  width: 25px;
+}
+.cart-item {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: orange;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}

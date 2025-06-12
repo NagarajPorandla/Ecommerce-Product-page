@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <nav class="nav-bar">
+        <div class="left-nav">
+          <img src="./images/logo.svg" alt="" />
+          <ul>
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="right-nav">
+          <img src="./images/icon-cart.svg" alt="" id="cart-icon" />
+          <img src="./images/image-avatar.png" alt="" class="avatar" />
+        </div>
+      </nav>
+      <hr />
+
+      <div class="main">
+        <div>
+          <div>
+            <img src="./images/image-product-1.jpg" alt="" class="main-image" />
+          </div>
+          <div class="all-images">
+            <img src="./images/image-product-1.jpg" alt="" />
+            <img src="./images/image-product-2.jpg" alt="" />
+            <img src="./images/image-product-3.jpg" alt="" />
+            <img src="./images/image-product-4.jpg" alt="" />
+          </div>
+        </div>
+        <div class="content">
+          <span class="name">Sneaker Company</span>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price">
+            <h3>$125.00 <span class="discount">50%</span></h3>
+            <span class="original-price">$250.00</span>
+          </div>
+          <div class="buttons">
+            <div>
+              <img src="./images/icon-minus.svg" alt="" />
+              <span>1</span>
+              <img src="./images/icon-plus.svg" alt="" />
+            </div>
+            <button class="add-to-cart">
+              <img src="./images/icon-cart.svg" alt="" width="20px" />Add to
+              Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="imageModel">
+        <div class="modal-content">
+          <button id="prevBtn">←</button>
+          <img
+            src="./images/image-product-1.jpg"
+            alt="popup image"
+            id="popupImg"
+          />
+          <button id="nextBtn">→</button>
+          <div class="modal-images">
+            <img src="./images/image-product-1.jpg" alt="" />
+            <img src="./images/image-product-2.jpg" alt="" />
+            <img src="./images/image-product-3.jpg" alt="" />
+            <img src="./images/image-product-4.jpg" alt="" />
+          </div>
+          <img src="/images/icon-close.svg" alt="" id="closeBtn" />
+        </div>
+      </div>
+      <div class="cart-container" id="cart-container">
+        <div class="cart">
+          <img src="/images/icon-close.svg" alt="" id="cartCloseBtn" />
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
